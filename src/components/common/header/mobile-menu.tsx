@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrambleText } from '../scramble-text'
-import { Button } from '@/components/ui'
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -66,11 +65,11 @@ export function MobileMenu({ isOpen }: MobileMenuProps) {
             chars='@#$%^&*()_+'
           />
         </Link>
-        <div className='text-center py-2'>
+        <div className='text-center py-2 container mx-auto px-6'>
           <Link href="#" className='font-[family-name:var(--font-orbitron)] bg-primary text-primary-foreground cursor-pointer'>
-            <Button size="lg">
-              Explore our work
-            </Button>
+          <button className="w-full bg-primary text-white cursor-pointer px-4 py-2 rounded-md hover:bg-primary/80 transition-colors text-sm font-medium">
+                Explore our work
+              </button>
           </Link>
         </div>
       </nav>
