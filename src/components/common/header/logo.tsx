@@ -7,7 +7,7 @@ export function Logo() {
   return (
     <h1 className='font-[family-name:var(--font-orbitron)] text-2xl cursor-pointer font-bold'>
       <Link
-        href={"/"}
+        href={"#"}
         className='flex gap-2'
       >
         {/* <Image
