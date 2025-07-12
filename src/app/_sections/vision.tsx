@@ -25,8 +25,11 @@ export const VisionSection = () => {
 
     if (!section || !cardsContainer || !content) return
 
-    // Sticky behavior for the cards container
-    gsap.set(cardsContainer, { position: "sticky", top: "20vh" })
+    // Sticky behavior for the cards container - using CSS instead of GSAP
+    cardsContainer.style.position = "sticky"
+    cardsContainer.style.top = "15vh"
+    cardsContainer.style.zIndex = "10"
+    cardsContainer.style.height = "fit-content"
 
     // Initial state - hide all elements
     gsap.set([...cards.current, titleRef.current, subtitleRef.current, descriptionRef.current], {
@@ -38,9 +41,9 @@ export const VisionSection = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: "top center",
-        end: "bottom center",
-        scrub: 1,
+        start: "top 80%",
+        end: "bottom 20%",
+        scrub: false,
         toggleActions: "play none none reverse"
       }
     })
@@ -65,7 +68,7 @@ export const VisionSection = () => {
     tl.to(descriptionRef.current, {
       opacity: 1,
       y: 0,
-      duration: 0.8,
+      duration: 0.4,
       ease: "power2.out"
     }, "-=0.4")
 
@@ -73,7 +76,7 @@ export const VisionSection = () => {
     tl.to(cards.current, {
       opacity: 1,
       y: 0,
-      duration: 0.6,
+      duration: 0.2,
       stagger: 0.2,
       ease: "power2.out"
     }, "-=0.2")
@@ -103,8 +106,8 @@ export const VisionSection = () => {
       ease: "none",
       scrollTrigger: {
         trigger: section,
-        start: "top bottom",
-        end: "bottom top",
+        start: "top 80%",
+        end: "bottom 20%",
         scrub: 1
       }
     })
@@ -115,10 +118,10 @@ export const VisionSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} id="vision" className="w-full border-b-foreground/30 border-b-[0.5px]">
-      <div className="flex items-center justify-center border-b-foreground/30 border-b-[0.5px]">
+    <section ref={sectionRef} id="vision" className="w-full border-b-foreground/30 border-b-[0.5px] min-h-screen relative">
+      <div className="flex items-center justify-center border-b-foreground/30 border-b-[0.5px] min-h-screen">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 h-full">
-          <div ref={cardsRef} className="w-full h-full flex flex-col gap-4 items-stretch justify-center p-10 pr-10 border-r-[0.5px] border-r-foreground/30">
+          <div ref={cardsRef} className="w-full h-fit flex flex-col gap-4 items-stretch justify-center p-10 pr-10 border-r-[0.5px] border-r-foreground/30 sticky top-[15vh] z-10">
             {/* 3card */}
             <div 
               ref={(el) => { if (el) cards.current[0] = el }}

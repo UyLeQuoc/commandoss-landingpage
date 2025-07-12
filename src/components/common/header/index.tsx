@@ -13,7 +13,7 @@ export function Header() {
   }
 
   return (
-    <header className='sticky top-0 w-full bg-foreground text-background z-10'>
+    <header className='sticky top-0 w-full bg-foreground text-background z-50'>
       <div className='flex justify-between items-center container mx-auto p-4'>
         <Logo />
         <DesktopNavigation />
