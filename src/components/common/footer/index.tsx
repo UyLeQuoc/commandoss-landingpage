@@ -1,15 +1,95 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from "next/link"
 import { Twitter } from "lucide-react"
 import { Logo } from '../header/logo'
+import { Button, Input } from '@/components/ui'
 
 export function Footer() {
+  const [email, setEmail] = useState("")
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Email submitted:", email)
+    // Handle email submission here
+  }
   return (
     <footer className="bg-foreground text-background">
+      <div className="flex relative">
+      {/* Left Section - Subscription */}
+      <div className="flex-1 bg-primary flex flex-col justify-center items-center p-8 lg:p-16 text-foreground">
+        <div className="max-w-md w-full space-y-8">
+          <div className="space-y-6">
+            <p className="text-sm font-medium tracking-[0.2em] uppercase">SUBSCRIPTION</p>
+
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">Stay up to date</h1>
+
+            <p className="text-lg leading-relaxed">
+              Be the first to know about the last updates.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="flex gap-0">
+            <Input
+              type="email"
+              placeholder="Email Address..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 border-gray-900 text-white placeholder:text-foreground rounded-r-none focus:ring-0 focus:border-gray-900 h-12"
+              required
+            />
+            <Button
+              type="submit"
+              className="border border-foreground text-background bg-foreground font-bold px-8 rounded-l-none h-12"
+            >
+              JOIN
+            </Button>
+          </form>
+        </div>
+      </div>
+
+      {/* Right Section - Partners */}
+      <div className="flex-1 bg-foreground flex flex-col justify-center items-center p-8 lg:p-16 relative border-b-[0.5px] border-b-white/10">
+        <div className="max-w-md w-full space-y-12">
+          <div className="space-y-6">
+            <p className="text-primary text-sm font-medium tracking-[0.2em] uppercase">CAREER</p>
+
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-white text-xl font-bold tracking-wide">BE A PART OF COMMANDOSS</h2>
+                <Button className="w-full bg-primary text-white font-medium py-3 cursor-pointer">
+                  Explore our Work
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Logo */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2">
+          <div className="relative w-20 h-20">
+            <div className="w-full h-full rounded-full flex items-center justify-center">
+              <span className="text-pribg-primary text-2xl font-bold">C</span>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center animate-[spin_10s_ease-in-out_infinite]">
+              <svg className="w-24 h-24 -rotate-12" viewBox="0 0 100 100">
+                <path id="circle" d="M 50,50 m -35,0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+                <text className="text-[6px] fill-white font-medium">
+                  <textPath href="#circle" startOffset="0%">
+                    COMMANDOSS • COMMANDOSS • COMMANDOSS • JOIN THE COMMUNITY •
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Logo and Buttons Section */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 relative">
             <div className="flex items-center gap-2 mb-6">
               <Logo />
             </div>
