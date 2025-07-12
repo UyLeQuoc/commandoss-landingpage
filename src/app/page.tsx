@@ -48,7 +48,7 @@ const HeroSection = () => {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-amber-100">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-100">
         About section
     </section>
   )
@@ -56,7 +56,7 @@ const AboutSection = () => {
 
 const  VisionSection = () => {
   return (
-    <section id="vision" className="min-h-screen flex items-center justify-center bg-amber-100">
+    <section id="vision" className="min-h-screen flex items-center justify-center bg-gray-100">
         Vision section
     </section>
   )

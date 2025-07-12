@@ -19,11 +19,11 @@ export function Footer() {
       <div className="flex-1 bg-primary flex flex-col justify-center items-center p-8 lg:p-16 text-foreground">
         <div className="max-w-md w-full space-y-8">
           <div className="space-y-6">
-            <p className="text-sm font-medium tracking-[0.2em] uppercase">SUBSCRIPTION</p>
+            <p className="text-sm tracking-[0.2em] uppercase font-bold">SUBSCRIPTION</p>
 
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight">Stay up to date</h1>
 
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed font-bold">
               Be the first to know about the last updates.
             </p>
           </div>
@@ -34,7 +34,7 @@ export function Footer() {
               placeholder="Email Address..."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 border-gray-900 text-white placeholder:text-foreground rounded-r-none focus:ring-0 focus:border-gray-900 h-12"
+              className="flex-1 border-gray-900 text-white placeholder:text-foreground placeholder:font-bold rounded-r-none focus:ring-0 focus:border-gray-900 h-12"
               required
             />
             <Button
