@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Orbitron } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-});
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
-  title: "CommandOSS — Pioneering Web3 on Sui",
+  title: "Welcome to CommandOSS",
   description:
     "CommandOSS is a community-driven Web3 software company, backed by Mysten Labs and pioneering innovation in the Sui ecosystem. Empowering talent and transforming the software industry.",
 };
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${orbitron.variable} antialiased`}
       >
         {children}
       </body>
