@@ -118,8 +118,8 @@ export const VisionSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} id="vision" className="w-full border-b-foreground/30 border-b-[0.5px] min-h-screen relative">
-      <div className="flex items-center justify-center border-b-foreground/30 border-b-[0.5px] min-h-screen">
+    <section ref={sectionRef} id="vision" className="w-full border-b-foreground/30 border-b-[0.5px] relative">
+      <div className="flex items-center justify-center border-b-foreground/30 border-b-[0.5px]">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 h-full">
           <div ref={cardsRef} className="w-full h-fit flex flex-col gap-4 items-stretch justify-center p-10 pr-10 border-r-[0.5px] border-r-foreground/30 sticky top-[15vh] z-10">
             {/* 3card */}
