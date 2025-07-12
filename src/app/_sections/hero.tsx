@@ -58,7 +58,7 @@ export const HeroSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} id="#" className="flex flex-col h-[calc(100vh-100px)] p-4 md:p-10 lg:p-20">
+    <section ref={sectionRef} id="#" className="flex flex-col h-[calc(100vh-150px)] p-4 md:p-10 lg:p-20">
       <div className="w-full relative flex-1">
         <Waves
           lineColor="#000"
