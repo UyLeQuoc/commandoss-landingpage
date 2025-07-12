@@ -1,25 +1,87 @@
 "use client"
 
-import { Footer, Header } from "@/components";
+import { Footer, Header, Waves } from "@/components";
 
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-manrope)]">
       <Header />
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start bg-amber-200">
-        <section>
-          <h1>C</h1>
-          <h1>O</h1>
-          <h1>M</h1>
-          <h1>M</h1>
-          <h1>A</h1>
-          <h1>D</h1>
-          <h1>O</h1>
-          <h1>S</h1>
-          <h1>S</h1>
-        </section>
+      <main className="flex flex-col gap-[32px]">
+        <HeroSection />
+        <AboutSection />
       </main>
       <Footer />
     </div>
   );
+}
+
+const HeroSection = () => {
+  return (
+    <section id="#" className=" flex flex-col h-[calc(100vh-100px)]">
+      <div className="w-full relative flex-1 container mx-auto mt-[36px]">
+        <Waves
+          lineColor="#000"
+          backgroundColor="rgba(255, 255, 255, 0.2)"
+          waveSpeedX={0.02}
+          waveSpeedY={0.01}
+          waveAmpX={40}
+          waveAmpY={20}
+          friction={0.9}
+          tension={0.01}
+          maxCursorMove={120}
+          xGap={12}
+          yGap={36}
+        />
+      </div>
+              <div className="w-full px-4 py-16 text-center">
+          <h1 className="font-[family-name:var(--font-orbitron)] font-extrabold text-6xl  leading-none tracking-tight">
+            COMMANDOSS
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            CommandOSS – Forging the next generation of software pioneers.
+          </p>
+        </div>
+    </section>
+  )
+}
+
+const AboutSection = () => {
+  return (
+    <section id="about">
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+      <h1>Section About</h1>
+    </section>
+  )
 }
