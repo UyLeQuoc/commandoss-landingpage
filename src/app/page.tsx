@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="font-[family-name:var(--font-manrope)]">
       <Header />
-      <main className="flex flex-col gap-[32px]">
+      <main className="flex flex-col">
         <HeroSection />
         <AboutSection />
         <VisionSection />
