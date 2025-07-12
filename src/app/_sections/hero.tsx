@@ -1,8 +1,9 @@
 import { Waves } from "@/components"
+import { LogoText } from "@/components/common/svg/logo-text"
 
 export const HeroSection = () => {
     return (
-      <section id="#" className=" flex flex-col h-[calc(100vh-100px)]">
+      <section id="#" className=" flex flex-col h-[calc(100vh-100px)] p-4 md:p-10 lg:p-20">
         <div className="w-full relative flex-1">
           <Waves
             lineColor="#000"
@@ -18,13 +19,11 @@ export const HeroSection = () => {
             yGap={36}
           />
         </div>
-                <div className="w-full px-4 py-16 text-center">
-            <h1 className="font-[family-name:var(--font-orbitron)] font-extrabold text-6xl  leading-none tracking-tight">
-              COMMANDOSS
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              CommandOSS – Forging the next generation of software pioneers.
+          <div className="w-full px-4 text-center">
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto pt-4">
+                Empowering Web3. Accelerating the Future of Sui.
             </p>
+            <LogoText />
           </div>
       </section>
     )
