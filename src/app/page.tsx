@@ -21,7 +21,7 @@ export default function Home() {
 const HeroSection = () => {
   return (
     <section id="#" className=" flex flex-col h-[calc(100vh-100px)]">
-      <div className="w-full relative flex-1 container mx-auto mt-[36px]">
+      <div className="w-full relative flex-1">
         <Waves
           lineColor="#000"
           backgroundColor="rgba(255, 255, 255, 0.2)"
