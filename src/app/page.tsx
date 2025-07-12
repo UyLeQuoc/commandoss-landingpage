@@ -9,6 +9,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px]">
         <HeroSection />
         <AboutSection />
+        <VisionSection />
       </main>
       <Footer />
     </div>
@@ -47,41 +48,17 @@ const HeroSection = () => {
 
 const AboutSection = () => {
   return (
-    <section id="about">
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
-      <h1>Section About</h1>
+    <section id="about" className="min-h-screen flex items-center justify-center bg-amber-100">
+        About section
     </section>
   )
 }
+
+const  VisionSection = () => {
+  return (
+    <section id="vision" className="min-h-screen flex items-center justify-center bg-amber-100">
+        Vision section
+    </section>
+  )
+}
+
